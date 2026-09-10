@@ -12,6 +12,10 @@ RUN npm run build
 
 FROM node:24.21.0-bookworm-slim AS runtime
 WORKDIR /app
+# Coolify's generated HTTP health check expects curl or wget in the image.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/*
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
     PORT=3000 \
