@@ -88,6 +88,11 @@
       "discontinued": true
     },
     {
+      "title": "Starlink Referral",
+      "href": "https://starlink.com?referral=RC-DF-13633896-64142-2",
+      "image": "/starlink.png"
+    },
+    {
       "title": "Google Workspace Referral",
       "href": "https://referworkspace.app.goo.gl/Vfyn",
       "image": "/google.png"
