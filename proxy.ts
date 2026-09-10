@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from "next/server";
  * returns a markdown representation of the page. Browsers (which send
  * `Accept: text/html,...`) continue to receive HTML.
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const accept = request.headers.get("accept") || "";
   const { pathname, search } = request.nextUrl;
 
